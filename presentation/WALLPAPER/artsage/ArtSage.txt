@@ -1,0 +1,414 @@
+ArtSage 1.00
+Copyright (c) 2012 Rick Xavier
+All Rights Reserved
+
+ArtSage is a small graphics viewer. It displays the image files in a folder tree. ArtSage is freeware for personal non-commercial use.
+
+
+Add & Remove
+------------
+To install: Add to user folder and run.
+To remove: Delete the program and help file.
+
+
+Features and options
+--------------------
+- Slideshow (slideshow, timer, windowed/fullscreen/wallpaper, stay on top)
+- Transparency (blend, opacity)
+- Loop (loop/pause/exit, reshuffle)
+- Sort (forward/reverse/random, tree/name/date, case sensitive)
+- Navigate (next/previous w/gears, first/last/current, next/prev folder, mousewheel)
+- Scroll (mouse, arrow keys w/gears, autoscroll, quiet autoscroll)
+
+- View (exhibit/favorites/desktop/archive, image folder, link target)
+- Exhibit (folder, refresh, subfolders, hidden folders, autorefresh)
+- Formats (bmp, emf, gif, ico, jpg, png, tif)
+- Find (find/filter/exclude, find next, landscape/portrait, bookmark, goto)
+- Favorites (send shortcut/copy, favorites folder, shortcut/copy to desktop)
+- Archive (move to archive, confirm, archive folder, log)
+
+- Catalog (thumbsize, hide viewer, show on launch)
+- Standard Catalog (navigation, sort, find, block recycle/archive/favorite)
+- Active Catalog (drag/drop, cut/copy/paste, context menu)
+
+- Wrap (resize window to wrap around each image)
+- Crop (remove borders and unused background)
+- Squeeze (scale down to fit window/desktop)
+- Shrink (scale down to fit one side)
+- Stretch (scale up to window/desktop)
+- Zoom (in, out, 100%, 1% gear, zoom step, zoom lock, zoom quality, mousewheel)
+- Rotate (rotate, rotate left, rotate lock, aspect filter, flip horizontal, exif orientation)
+- Collage (fixed-size roaming images)
+- Transitions (select effects, overlap/wipe)
+
+- Window (caption, status, tray icon, decor, bg colour, center/roam, corral, draggable,
+  show/hide hotkey, single instance)
+- Presets (save/restore 5 window positions)
+- Layout (image centered, at corners, roaming within window)
+- Fullscreen (caption, cursor, centered/roaming image)
+- Wallpaper (center/tile/stretch, clear, restore)
+- Shell (view, explore, open with, copy file, move/rename, save as, copy image,
+  copy view, paste, recycle, confirm, view with, explore with, blackbox)
+
+- Settings (save now, save as, save on exit, save folder)
+- Info (F1 menu, menu pins, menu at cursor, help, about)
+
+- Drag and Drop in main window to exhibit (folders/files/shortcuts, Shift appends)
+- Command line (inifile, options, path)
+- Portable (no install, settings in program folder, relative paths)
+- Language support (unicode, language files for translation)
+- Multi-monitor support
+- 32-bit and 64-bit versions included
+
+
+Operation
+---------
+1) Press F1 for the menu
+   - keyboard shortcuts are listed on the menu
+   - additional keys: Slideshow(Enter), Next(Spacebar), Previous(Backspace)
+                    : Exhibit(Shift+F7), Favorites(Shift+F8), Archive(Shift+F9)
+                    : Catalog (doubleclick mouse)
+   - mousewheel zoom/navigate option
+
+2) Window
+   a) Sizing
+      - wrap (W) resizes the window to the image, within the desktop
+      - wrap also enables the window autocenter option
+      - window presets and manual resizing automatically turn off Wrap
+      - wrap restores wrapping from collage and presets
+      - wrap off in fullscreen preserves the original window size
+
+   b) Cropping
+      - cropping removes everything but the image
+      - turn cropping off to expose the window frame and caption
+      - for a fixed (unwrapped) window, cropping removes the unused background
+
+   c) Show/Hide and instances
+      - Show/Hide applies to the first (or single) instance
+      - Single Instance restricts ArtSage to a single instance
+
+   d) Multiple monitors
+      - Drag window to establish centering/corral/fullscreen in any monitor
+      - Presets can be set/restored to any monitor
+
+3) Image
+   a) Scaling (% in status bar)
+      - squeeze, shrink and stretch are variable zoom settings
+        . squeeze scales the image down to fit the window/desktop
+        . shrink scales the image down to fit one side to the window/desktop
+          - squeeze takes precedence over shrink
+        . stretch scales the image up to the window/desktop
+          - with squeeze it stretches to fit, otherwise it stretches to fill
+      - zoom lock is a fixed zoom (!nn% in status bar)
+        . zoom lock and squeeze/shrink/stretch disable each other
+        . zoom lock can also be cleared by locking at 100%
+   b) Scrolling (H:n V:n)
+      - the horizontal & vertical scrollable area (arrow keys to scroll)
+      - use Shift/Ctrl/Alt keys to alter keyboard scrolling speed
+      - left-click mouse to scroll large images
+      - left-click and mousewheel scrolls vertically
+   c) Rotate rotates the image 90 degrees left/right
+      - rotate lock locks the rotation for the slideshow
+      - aspect filter only rotates to match the window/desktop aspect ratio
+   d) Layout positions the image in a fixed window
+      - used to align cropped images in screen corners/borders
+   e) Collage overlaps fixed-size roaming position images
+      - collage temporarily disables Wrap
+
+4) Exhibit
+   a) The root folder and exhibit can be set:
+      - with the folder browser (Exhibit->Folder)
+      - by dropping a folder onto ArtSage
+      - by dropping a single file in the folder onto ArtSage
+
+   b) Temporary exhibits can be set:
+      - with the Find->Filter function
+      - with the View->Favorites/Desktop/Archive options
+      - with the View->Image Folder/Link Target options
+      - View->Exhibit redisplays the main exhibit without reloading (or verifying)
+
+   c) The main exhibit can be temporarily altered:
+      - by dropping a group of files/folders onto ArtSage
+      - by appending images (SHIFT+drop/select)
+
+   d) Exhibit->Refresh(Ctrl+R) reloads the main exhibit from the root folder
+      - any appended images are released
+      - auto refresh refreshes on any file/folder change in the current view
+      - View->Exhibit displays the last unfiltered main exhibit (may require refresh)
+
+   e) Shortcuts (shell links) can be used in place of files/folders
+      - shortcuts are created using Favorites->Send ShortCut/Shortcut To Desktop
+      - shortcut names are prepended with an asterisk (*filename.lnk)
+      - file operations (eg Delete) on shortcuts affect the shortcut only
+
+   f) Find/Filter and Find Next search within the current exhibit
+      - to begin a new search, return to View->Exhibit, View->Favorites, etc
+
+   g) File search (loading exhibit)
+      - the file search peeks ahead for incremental search and display
+      - while searching, the exhibit can be sorted but not altered
+        . Find/Filter will find but not filter
+        . no switching to favorites, desktop, archive or current image folder
+
+   h) Sorting by path/filename can be done 3 ways
+      - Tree: some symbols (eg digits) precede the path separator(\)
+      - Tree strict: the path separator(\)precedes all but ! (slower)
+      - Name: basic pathname sort that does not preserve the folder tree
+      - case sensitive sorts are faster than case insensitive
+
+5) Catalog
+   a) Navigate with arrow keys, PageUp, PageDown, Home, End
+   b) Shift+[A/F/D/F9] to view Exhibit/Favorites/Desktop/Archive
+   c) Space/Backspace for next/previous folder, Shift+F5 to descend
+   d) Supports block archive, recycle and favorite
+      - Shift selects a range, Ctrl adds with mouse click
+   e) Supports block drag/drop and cut/copy/paste
+      - Drag/drop/paste to thumbnail folder or root (target shows in status bar)
+   f) Autorefresh is always activated for the catalog
+      - it may be paused if too frequent but is reactivated by file operations
+
+6) Shell:
+   a) Copy, Paste and Save: all use the current image settings (zoom etc)
+      - Copy Image includes the offscreen portion
+      - Copy View copies only the visible portion (crops the image)
+   b) Wallpaper uses the current image settings (optional with Blackbox)
+   c) Blackbox: ArtSage detects if Blackbox is the shell
+      - The caption/window height adjustments are for bbLeanSkin
+      - Smart Wallpaper lets Blackbox handle backgrounds
+      - Unscaled smart wallpaper does not write to artpaper.bmp
+
+7) Portable ArtSage: edit the artsage.ini [Portable] section
+   - set "savefolder=FALSE" (or use the "Settings->Save Folder" menu option)
+   - use relative paths for the file and tools
+
+8) Misc:
+   a) Transition latencies can be tuned in the settings file
+   b) File read errors are logged to "errors.log"
+      - Usually due to a corrupted file header that GDI+ can't handle
+      - Loading and saving with a graphics editor usually fixes this
+      - May also be due to a stale shortcut
+
+
+Command Line / Shortcut
+-----------------------
+Usage: artsage [inifile] [options] [path]
+
+  inifile:     secondary settings file (filename.ini) overrides artsage.ini
+
+  options:     command line options override the settings file(s)
+
+               -slide          Slideshow on
+               -noslide        Slideshow off
+               -tnnnn          Set timer to nnnn millisecs
+               -windowed       Show windowed
+               -fullscreen     Show fullscreen
+               -wallpaper      Show as wallpaper
+               -ontop          Stay on top
+               -notop          Don't stay on top
+
+               -blend          Blend with background (transparency)
+               -noblend        Don't blend (no transparency)
+               -bnnn           Set blend opacity to nnn (0-255)
+               -loop           Loop slideshow
+               -loopause       Pause after slideshow
+               -loopexit       Exit after slideshow
+               -loopshuffle    Reshuffle when random slideshow loops
+               -noloopshuffle  Don't reshuffle when slideshow loops
+
+               -sortforward    Sort forward
+               -sortreverse    Sort reverse
+               -sortrandom     Sort random
+               -sorttree       Sort on file name, preserve folder tree
+               -sorttreestrict Sort on file name (strict), preserve folder tree
+               -sortname       Sort on file name
+               -sortcreated    Sort on file creation date/time
+               -sortmodified   Sort on file modification date/time
+               -sortaccessed   Sort on file accessed date/time
+               -sortcase       Case sensitive sort
+               -nosortcase     Case insensitive sort               
+               
+               -wheelnav       Mousewheel navigates
+               -wheelzoom      Mousewheel zooms
+               -autoscroll     Autoscroll large images to center
+               -noautoscroll   Don't autoscroll to center
+               -quietscroll    Don't animate autoscroll
+               -animatescroll  Animate autoscroll
+
+               -browse         Open folder browser
+               -subfolders     Include subfolders
+               -nosubfolders   Exclude subfolders
+               -hidden         Include hidden subfolders
+               -nohidden       Exclude hidden subfolders
+               -autorefresh    Refresh on new files
+               -noautorefresh  Don't refresh on new files
+               -autofindcreate Find last created on autorefresh
+               -autofindmodify Find last modified on autorefresh
+               -autofindaccess Find last accessed on autorefresh
+               -noautofind     Don't find after autorefresh
+
+               -bmp            Read .bmp files
+               -nobmp          Don't read .bmp files
+               -emf            Read .emf files
+               -noemf          Don't read .emf files
+               -gif            Read .gif files
+               -nogif          Don't read .gif files
+               -ico            Read .ico files
+               -noico          Don't read .ico files
+               -jpg            Read .jpg and .jpeg files
+               -nojpg          Don't read .jpg and .jpeg files
+               -png            Read .png files
+               -nopng          Don't read .png files
+               -tif            Read .tif and .tiff files
+               -notif          Don't read .tif and .tiff files
+
+               -removefail     Remove unloadable files from exhibit
+               -noremovefail   Don't remove unloadable files from exhibit
+               -logerrors      Log file-read errors in "errors.log"
+               -nologerrors    Don't log file-read errors
+               -loglnkfail     Log link failures in "errors.log"
+               -nologlnkfail   Don't log link failures
+
+               -landscape      Show landscape images only
+               -portrait       Show portrait images only
+               -markexit       Bookmark at exit
+               -nomarkexit     Don't bookmark at exit
+
+               -cathideview    Catalog hides the viewer window
+               -nocathideview  Catalog doesn't hide the viewer window
+               -catlaunch      Open catalog at launch
+               -nocatlaunch    Don't open catalog at launch
+
+               -wrap           Wrap window around the image (resize window)
+               -nowrap         Don't wrap window (fixed window)
+               -crop           Remove borders and unused background
+               -nocrop         Leave borders and unused background
+               -squeeze        Scale down to fit
+               -nosqueeze      Don't scale down to fit
+               -shrink         Scale down to fit one side
+               -noshrink       Don't scale down to fit one side
+               -stretch        Scale up (fit/fill depends on shrink)
+               -nostretch      Don't scale up
+
+               -znn            Set zoom lock to nn%
+               -zoomdef        Set zoom/scale quality to default
+               -zoomhigh       Set zoom/scale quality to high
+               -zoombest       Set zoom/scale quality to best
+               -rnn            Set rotate lock to (0/90/180/270) deg
+               -aspect         Filter rotations to match aspect ratio
+               -noaspect       Don't filter rotations
+               -exiforient     Use exif orientation
+               -noexiforient   Don't use exif orientation
+               -collage        Collage on (fixed-size roaming)
+               -nocollage      Collage off
+               -transitions    Use transitions
+               -notransitions  Don't use transitions
+               -overlap        Overlap images during transitions
+               -nooverlap      Don't overlap transitions
+
+               -title          Show file name in title bar
+               -notitle        Don't show file name
+               -fullname       Show full path for file name
+               -shortname      Don't show full path
+               -statusbar      Show the status bar
+               -nostatusbar    Remove the status bar
+               -taskbar        Use taskbar instead of tray icon
+               -trayicon       Use tray icon instead of taskbar
+               -decor          Decorate window
+               -nodecor        Don't decorate window
+               -autocenter     Autocenter window on wrap
+               -noautocenter   Don't autocenter window
+               -roam           Window roams desktop
+               -noroam         Window doesn't roam
+               -corral         Keep window within screen boundaries
+               -nocorral       Don't keep window within screen boundaries
+               -draggable      Drag with any part of the window
+               -nodraggable    Drag with the title bar only
+
+               -center         Center window in desktop
+               -preset1        Restore window preset 1
+               -preset2        Restore window preset 2
+               -preset3        Restore window preset 3
+               -preset4        Restore window preset 4
+               -preset5        Restore window preset 5
+               -centered       Layout centered
+               -topleft        Layout top left
+               -topright       Layout top right
+               -bottomleft     Layout bottom left
+               -bottomright    Layout bottom right
+               -single         Close other instances of ArtSage
+               -nosingle       Don't close other instances of ArtSage
+
+               -screenname     Show file name when fullscreen
+               -noscreenname   Don't show file name when fullscreen
+               -screencursor   Show cursor when fullscreen
+               -noscreencursor Hide cursor when fullscreen
+               -screencenter   Centered image when fullscreen
+               -screenroam     Roaming image when fullscreen
+
+               -centerwall     Center wallpaper
+               -tilewall       Tile wallpaper
+               -stretchwall    Stretch wallpaper
+               -fitwall        Fit wallpaper (Windows 7)
+               -fillwall       Fill wallpaper (Windows 7)
+               -clearwall      Clear wallpaper
+
+               -confirmdel     Confirm delete operation
+               -noconfirmdel   Don't confirm delete operation
+               -confirmarc     Confirm archive operation
+               -noconfirmarc   Don't confirm archive operatioin
+               -arclog         Log archived images
+               -noarclog       Don't log archived images
+               -save           Save settings on exit
+               -nosave         Don't save settings on exit
+               -savefolder     Save root folder
+               -nosavefolder   Don't save folder (portable)
+
+               -noshell        Disable all shell operations*
+               -nomenu         Disable all operations*
+
+               -translate      Create a language file (artsage.lang.ini) for translation*
+
+  path:        If a folder, it is the root exhibit folder
+               If a file, the parent folder is the root exhibit folder
+
+* Option available from command line only
+
+Examples:
+  artsage64 -slide -crop -windowed -t2000 "C:\Users\Public"
+  artsage64 -fullscreen -noscreenname -z50 -screenroam .\
+  artsage64 -nosqueeze -shrink -stretch -r90 -aspect
+
+
+Autorun CD/USB Drive
+--------------------
+To make an autorun CD, create the file "autorun.inf" containing these 3 lines:
+
+[autorun]
+open=artsage64.exe -slide .\
+icon=artsage64.exe
+
+Copy autorun.inf to the CD root directory, together with artsage.exe. Your photos can be in the root directory or in subfolders. You can use command line options. You should also copy this (ArtSage.txt) help file to the CD.
+
+
+File Associations
+-----------------
+ArtSage does not associate JPG files with itself. You can do this manually by right-clicking a .jpg and using the "Open With" option: select "Choose Program..." and browse to ArtSage.
+
+If you check the "Always use the selected program [etc....]" box, ArtSage will become the default viewer, otherwise it will simply remain in the "Open With" list. (You can control any file extension this way.)
+
+You can also place a shortcut to ArtSage in the "Send To" menu for easy access. Or, best of all, use a file manager that lets you associate ArtSage with a function key.
+
+
+Warranty Disclaimer
+-------------------
+THE SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND.
+
+THE AUTHOR DISCLAIMS ALL WARRANTIES, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, ANY IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+THE ENTIRE RISK AS TO THE USE AND PERFORMANCE OF THE SOFTWARE REMAINS WITH YOU. IN NO EVENT WILL THE AUTHOR BE LIABLE TO YOU OR ANY OTHER PARTY FOR DAMAGES, INCLUDING ANY GENERAL, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OF OR INABILITY TO USE THE SOFTWARE, EVEN IF THE AUTHOR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+
+Contact the Author
+------------------
+Rick Xavier
+www.xworks.ca

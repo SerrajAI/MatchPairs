@@ -1,0 +1,28 @@
+Program Coquille;
+Uses Graph;
+const
+  i=50;
+  j=50;
+Var Mode, Pilote : Smallint;
+k:integer;
+BEGIN
+  Mode := Detect ;
+  InitGraph(Pilote,Mode,'c:\bp\bgi');
+  SetColor(Yellow);
+  begin
+for k:=1 to 13 do
+       begin
+       Rectangle (50,50,50+80,50+100);
+       SetFillStyle ( HatchFill,white);
+       FloodFill (50+1,50+1,yellow);
+
+       Rectangle (50+105,50,105+50+80,50+100);
+       SetFillStyle ( HatchFill,white);
+       FloodFill (50+1+105,50+1+25,yellow);
+       ReadLn;
+       CloseGraph;
+       end;
+
+
+       end;
+       end.

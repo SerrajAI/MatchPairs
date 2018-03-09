@@ -1,0 +1,24 @@
+<?wpl version="1.0"?>
+<smil>
+    <head>
+        <meta name="Generator" content="Microsoft Windows Media Player -- 12.0.7601.17514"/>
+        <meta name="ItemCount" content="6"/>
+        <meta name="IsFavorite"/>
+        <meta name="ContentPartnerListID"/>
+        <meta name="ContentPartnerNameType"/>
+        <meta name="ContentPartnerName"/>
+        <meta name="Subtitle"/>
+        <author/>
+        <title>MASTEROFCARDSSOUNDTRACK</title>
+    </head>
+    <body>
+        <seq>
+            <media src="..\..\..\..\Downloads\Music\Two Steps From Hell - Heart of Courage (Choir).mp3" tid="{A7FCA945-A3D2-4618-A180-630536D526EB}"/>
+            <media src="..\..\..\..\Downloads\Music\Hans Zimmer &amp;amp; James Newton Howard - Joker Crashes The Party.mp3" tid="{004DFD47-B80A-41B2-BD27-2EF26CC1AD25}"/>
+            <media src="..\..\..\..\Downloads\Music\Mind Heist (Extended Version).mp3" tid="{A4A380F5-5221-4073-9755-37459DD14325}"/>
+            <media src="..\..\..\..\Downloads\Music\The Fountain Soundtrack - Clint Mansell - First Snow.mp3" tid="{65CF8A7C-99A6-4F6A-A92D-E5AEBC5CE76C}"/>
+            <media src="..\..\..\..\Downloads\Music\Assassins Creed 2 Race Music.mp3" tid="{0958851F-8220-4ACF-89F7-0C7F41551254}"/>
+            <media src="..\..\..\..\Downloads\Music\Lux Aeterna - Clint Mansell - Full Orchestral Version   Download link [1080 HD].mp3" cid="{CD3CF516-CDD6-4F75-8ECE-265615D1231A}" tid="{407F89A2-C20D-4C31-A204-BE1578A4981D}"/>
+        </seq>
+    </body>
+</smil>
